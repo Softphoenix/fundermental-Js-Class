@@ -244,6 +244,52 @@ switch (gender) {
       break;
 }
 
+// let num = 1;
+// let word ;
+// if (num === 1) word = 'one';
+// else if (number === 2) word = 'two';
+// else if (number === 3) word = 'three';
+// else num = 'unknown'
+// console.log ('the answer is one')
+
+
+// with Switch case 
+
+// let num = 4;
+// let word;
+//   switch (num)  {
+//     case 1 :
+//       word = 'one';
+//       console.log ('the answer is one')
+//       break ;
+//       case 2 :
+//         word = 'two';
+//         console.log ('the answer is two')
+//         break ;
+//         case 3 :
+//           word = 'three';
+//           console.log ('the answer is three')
+//           default :
+//           word = 'unknown';
+//           console.log ('the answer is unknown')
+//           break ;
+//   }
+
+  // And now with nested tenary operation
+
+  let num = 1 ;
+  let word =
+  num === 1 
+  ? "one"
+  : num === 2 
+  ? "two"
+  : num === 3 
+  ? "three"
+  : "unknown"
+  console.log ('the answer is one')
+  console.log ('the answer is two')
+  console.log ('the answer is three')
+
 
 // tenary operators
 
@@ -401,3 +447,92 @@ console.log(student);
 console.log(student.state);
 console.log(student["firstName"]);
 
+var key = 'ca';
+console.log(student['ca']);
+
+var worker = Object.create(null);
+worker.job = 'doctor';
+worker.salary = 30000;
+console.log(worker);
+
+// var job = () => (
+
+//   occupation = 'web deb'
+
+// )
+
+//  object with function
+var house = {
+  address: 'gwags',
+  //  monthlyRent:  1000,
+  annual: 0,
+  calculatAnnualRent: function (monthlyRent = 6000) {
+    // var annual = this.monthlyRent * 12;
+    // return annual;
+    // house.annual = this.monthlyRent * 12;
+    house.annual = monthlyRent * 12
+    return this.annual;
+  },
+};
+console.log(house.calculatAnnualRent);
+console.log(house.calculatAnnualRent(400000))
+console.log(house);
+// excercise
+// function Bmi  () {
+//   (mark = {
+//   fullName: 'mark joel',
+//   mass: 100,
+//   height: 1.99
+//  }),
+//     (jane = {
+//       fullName:  'mark joel',
+//        mass: 100,
+//        height: 1.99
+//  }),
+//   let bmi = mass / (height * height);
+
+//  markBmi = mass / (height * height);
+//  janeBmi = mass / (height * height);
+
+
+//  if (markBmi > janeBmi) {
+//  console.log('mark won');
+// } else if (janeBmi > markBmi) {
+// console.log('jane won'); 
+// } else {
+// console.log('its a draw');
+// }
+
+// }
+// Bmi();
+
+var mark = {
+   fullName: 'mark emeka',
+   mass: 56,
+   height: 1.6,
+   calculateBmi: function ()  {
+     this.bmi = this.mass / (this.height * this.height);
+    return this.bmi;
+   },
+};
+//  console.log(mark.valculateBmi());
+
+var daniel = {
+    fullName: 'daniel emeka',
+    mass: 56,
+    height: 1.7,
+    calculateBmi: function () {
+      this.bmi = this.mass / (this.height * this.height);
+      return this.bmi;
+    }
+    // job 'javascript'
+    // color ''
+};
+// var markMass = prompt('whta is mark mass kg');
+// var markheight = prompt('what is mark height in meter ?');
+
+// var danielMass = prompt('what is daniel mass in kg?');
+// var danielHeight = prompt('what is daniel height in meter ?');
+
+// mark.mass = parseFloat(markMass);
+// daniel.height = parseFloat(markHeight);

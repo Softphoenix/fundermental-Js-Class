@@ -143,15 +143,15 @@ console.log(myAge);
 
   // classwork
   var transport = 100;
-  if (transport <= 200) {
+  if (transport <= 100) {
     console.log("go to the market")
   } else {
     console.log("not enough money")
   }
   
   
-var studentScore = '40';
-if (studentScore < '40') {
+var studentScore = 40;
+if (studentScore < 40) {
   console.log('the student fail')
 } else {
   console.log('student pass')
@@ -296,6 +296,19 @@ switch (gender) {
 
 var isMarried = true;
  console.log("is james married" + (isMarried ? " yes " :  "no"));
+ if (isMarried = false) {
+  console.log('happy married life to him')
+ } else{
+  console.log('he is preparing to marry next year')
+ }
+
+ switch (isMarried) {
+  case 'isMarried':
+ console.log('she has married')
+ default:
+  console.log('she is not married')
+ }
+
 
  // class work
 
@@ -334,10 +347,21 @@ var isMarried = true;
          // }
          // calculateAge() function invocation
 
+         // funtion decleration
+         function fullName(){
+          let firstName = 'kalifa'
+          let lastName = 'azeez'
+          let fullName = firstName + " " + lastName
+          console.log(fullName)
+          // return fullName.toUpperCase().concat(' miracle')
+         }
+         fullName()
+        //  console.log(fullName())
+
       console.log("hello am" + calculateAge(2009) + " years old");   
       console.log("i am " + calculateAge(2000) + "years old");
+      
       function calculate() {
-
       }
      calculateAge()
       function yearsUntilRetirement(dob, jobYear, name) {
@@ -346,7 +370,6 @@ var isMarried = true;
         var ageTillRetirement = 65 - myAge;
         var workTillRetirement = 35 - noOfYears;
         if (ageTillRetirement > workTillRetirement){
-
           console.log(`hello ${name} you have ${workTillRetirement} years before you retire`); 
       } 
       else if (workTillRetirement > ageTillRetirement) {
@@ -536,3 +559,172 @@ var daniel = {
 
 // mark.mass = parseFloat(markMass);
 // daniel.height = parseFloat(markHeight);
+
+
+if (mark.calculateBmi() > daniel.calculateBmi()) {
+  console.log('mark has the highest bmi');
+  console.log('full name', mark.fullName);
+  console.log('bmi', mark.bmi);
+} else if (daniel.calculateBmi() > mark.calculateBmi()) {
+  console.log('daniel has the highest bmi');
+  console.log('full name', daniel.fullName);
+  console.log('bmi', daniel.mbi)
+} else {
+  console.log('its a stalemate');
+}
+
+// loops and iteration it is use to repeat a set of task forLoop
+// this is a forLoop
+for (var index = 0; index <= 20; index++) {
+  console.log('hello ' + index);
+}
+
+var students = ['john', 'james', 'fred', 'dan', 'success'];
+
+for (var i = 0; i < students.length; i++) {
+  console.log(students.length[i]);
+  if (students[i] === 'james') {
+    break;
+  }
+}
+ 
+// whileloop 
+
+var counter = 0;
+while (counter < students.length) {
+  console.log('hello' + students[counter]);
+  counter++;
+}
+
+// map
+students.slice(1,3).map(function (student) {
+   console.log(student)
+})
+
+var developers = [
+  {
+    name: "victor",
+    language: 'javascript',
+    address: 'usa',
+  },
+  {
+    name: 'bidemi',
+    language: 'javasript',
+    address: 'gwagwalada',
+  },
+  {
+    name: 'lifted',
+    language: 'javascript',
+    address: 'lokoja',
+  },
+  {
+    name: "frank",
+    language: 'javasript',
+    address: 'kuje',
+  },];
+
+  //const {name, language, address} = developers  //destructuring
+  developers.map((developer) => {
+    console.log(developer.nmae)
+  })
+  developers.map((developer) => (
+    console.log(developer.name)
+  ))
+developers.map(function ({name, language, address}) {
+  console.log(
+    name +
+    ' codes in ' +
+     language +
+     ' and lives in ' +
+     address
+  );
+});
+
+function calTips(bill) {
+  //  var bill = [
+  //    {bill: 5000},
+  //    {bill: 15000},
+  //  {bill: 25000},
+  //  {bill: 55000},
+  // ]
+  var percentage;
+  if (bill < 5000) {
+    percentage = 0.2;
+  } else if(bill >= 5000 && bill <= 20000) {
+    percentage = 0.15;
+  } else if (bill > 20000) {
+    percentage = 0.1;
+  }
+  return percentage * bill;
+}
+
+// console.log(calTips(300));
+
+// correction
+
+var john = {
+  fullName: 'john Ali ',
+  bills: [12400, 4800, 26800, 18000, 4200],
+  calTips: function() {
+    this.tips = [];
+    this.finalValues = [];
+    for (var i = 0; i < this.bills.length; i++) {
+      var percentage;
+      var bill = this.bills[i];
+      if (bill < 50000) {
+        percentage = 0.2;
+      } else if (bill >= 5000 && bill <= 20000) {
+        percentage = 0.15;
+      } else {
+        percentage = 0.1;
+      }
+      this.tips[i] = bill * percentage;
+      this.finalValues[i] = bill + tips
+    }
+  }
+};
+var obi = {
+  fullName: 'Obi Peter ',
+  bills: [7700, 47500, 11000, 4000, 4500],
+  calTips: function() {
+    this.tips = [];
+    this.finalValues = [];
+    for (var i = 0; i < this.bills.length; i++) {
+      var percentage;
+      var bill = this.bills[i];
+      if (bill < 10000) {
+        percentage = 0.2;
+      } else if (bill >= 10000 && bill < 30000) {
+        percentage = 0.1;
+    } else {
+      percentage = 0.25;
+    }
+    this.tips[i] = bill * percentage;
+    this.finalValues[i] = bill + bill + percentage;
+  }
+}
+};
+function calculateAverage(tips) {
+  var sum = 0;
+  for (var i = 0; i < tips.length; i++) {
+    sum = sum + tips[i];
+  }
+  return sum / tips.length;
+}
+john.calTips();
+obi.calTips();
+john.average = calculateAverage(obi.tips);
+console.log(john, obi);
+
+if (john.average > obi.average) {
+  console.log(
+    john.fullName +
+    " 's family pays higher tips, with an average of $ " +
+    john.average
+  );
+} else if (obi.average > john.average) {
+  console.log(
+    obi.fullName +
+    " 's family pays higher tips, with an average of $ '"
+  );
+}

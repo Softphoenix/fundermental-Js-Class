@@ -24,10 +24,9 @@ var age = 24;
 console.log(age)
 var isStudent = true;
 console.log (isStudent);
-var let = 'ayo'
 
 
-// naming variable , variable name can only start with letter or an underscore or dollar sign
+//  naming variable , variable name can only start with letter or an underscore or dollar sign
 // variable name cannot contain special characters or space in between 
 
 var $5years = 5;
@@ -170,7 +169,7 @@ var studentCgpa = 3.5;
     console.log('the student graduated with pass')
   } else {
     console.log('the student did not graduated')
-  }
+  } 
 
   function cgpa(studentCgpa) {
     
@@ -319,6 +318,7 @@ var isMarried = true;
  // correction
 
  var johnAve = (89 + 120 + 103)  / 3;
+    console.log(johnAve)
  var mikeAve = (116 + 94 + 123)  / 3;
  var maryAve = (97 + 134 + 106)  / 3;
 
@@ -332,16 +332,29 @@ var isMarried = true;
     console.log("it is a draw");
  }
 
- // function
+ // arrow function
+
+ const sayhi =(a,b)=>{
+let year = a*b;
+return year
+ }
+console.log(sayhi(10,10))
+ 
+// function
        
      function calculateAge(yearOfBirth = 1998) {
             let currentYear = 2022;
             let age = currentYear - yearOfBirth;
             return age;
 
-
           }
-
+      function calculateYear(yearOfBirth = 2000) {
+        const currentYear = 2022;
+        const age = currentYear - yearOfBirth;
+        return age;
+      }
+     console.log(calculateYear()
+     ) 
           // function name(){
          //   calculate_age
          // }
@@ -351,7 +364,8 @@ var isMarried = true;
          function fullName(){
           let firstName = 'kalifa'
           let lastName = 'azeez'
-          let fullName = firstName + " " + lastName
+          // let fullName = firstName + " " + lastName
+          let fullName = `${firstName} ${lastName}` .concat(' jane')
           console.log(fullName)
           // return fullName.toUpperCase().concat(' miracle')
          }
@@ -362,8 +376,18 @@ var isMarried = true;
       console.log("i am " + calculateAge(2000) + "years old");
       
       function calculate() {
+        sum = 1 * 8
+        console.log(sum)
       }
-     calculateAge()
+     calculate()
+
+     function multiply(a, b) {
+      let multiply = `${a * b}`
+      return multiply;
+     }
+     console.log(multiply(55, 7))
+     console.log(multiply(5, 7))
+
       function yearsUntilRetirement(dob, jobYear, name) {
         var myAge = calculateAge(dob)
         var noOfYears = calculateAge(jobYear);
@@ -383,7 +407,64 @@ var isMarried = true;
 yearsUntilRetirement(1998, 2009,"james");
 yearsUntilRetirement(1998, 2005, "joy");
 yearsUntilRetirement(1998, 2015, "mary");
-yearsUntilRetirement(1998, 2005, "rita");
+yearsUntilRetirement(1986, 2021, "azeez");
+
+function payment() {
+  let total = 40000
+  let firstPayment = 20000
+  let secondPayment = 20000
+  let currentPay = firstPayment + secondPayment
+  let balance = total - currentPay
+  // return balance
+console.log(balance)
+}
+// console.log(payment())
+payment()
+
+function  calculateCgpa() {
+  let firstClassGrade = 4.5;
+  let firstYear = 2.5;
+  let secondYear = 3.5;
+  let thirdYear = 4.3;
+  let finalLevel = 2.2;
+  let totalGrade = (firstYear + secondYear + thirdYear + finalLevel) / 4;
+  console.log(totalGrade)
+  if (totalGrade < firstClassGrade && totalGrade != firstClassGrade) {
+    console.log('the student did not graduated with first class')
+  } else if (totalGrade >= firstClassGrade) {
+    console.log('the student graduated with first class')
+  } else {
+    console.log( 'the student did not graduate')
+  }
+  
+}
+calculateCgpa()
+
+let myGrade = (a = 5, b = 8, c = 4) =>{ 
+  let myAverageGrade = a*b/c
+  return myAverageGrade;
+}
+console.log(myGrade())
+
+// let zksyncLabTestnet = 'Airdrop'
+//    let performTestnet = 'yes';
+//    if (performTestnet) {
+//     console.log('You are Eligible for Zksync_Lab Airdrop')
+//    } else {
+//      console.log('You are not eligible for  Zksync_Lab Airdrop')
+//    }
+
+   function zksyncLabTestnet() {
+    let participateInTestnet = 'yes';
+    if (participateInTestnet) {
+     console.log('You will receive Airdrop') 
+    } else {
+     console.log('You will not receive Airdrop')
+    }
+ 
+ }
+ zksyncLabTestnet()
+ 
 
 var result = [90, 87, 66, 88, 99 ,'john']
 console.log(result)
@@ -402,6 +483,12 @@ console.log(student);
 student.unshift('ali');
 console.log(student);
 
+// classwork
+let favoriteFruit = ['watermellon', 'guava', 'apple', 'gardenegg', 'banana'];
+  console.log(favoriteFruit)
+  console.log(favoriteFruit.length)
+  console.log(favoriteFruit[3].concat('fruit'))
+  alert(favoriteFruit[4].concat('fruit'))
 
 // function practice
 let fuel = 99;
@@ -500,34 +587,37 @@ var house = {
 console.log(house.calculatAnnualRent);
 console.log(house.calculatAnnualRent(400000))
 console.log(house);
-// excercise
-// function Bmi  () {
-//   (mark = {
-//   fullName: 'mark joel',
-//   mass: 100,
-//   height: 1.99
-//  }),
-//     (jane = {
-//       fullName:  'mark joel',
-//        mass: 100,
-//        height: 1.99
-//  }),
-//   let bmi = mass / (height * height);
-
-//  markBmi = mass / (height * height);
-//  janeBmi = mass / (height * height);
 
 
-//  if (markBmi > janeBmi) {
-//  console.log('mark won');
-// } else if (janeBmi > markBmi) {
-// console.log('jane won'); 
-// } else {
-// console.log('its a draw');
-// }
+excercise
 
-// }
-// Bmi();
+function Bmi () {
+  (mark = {
+  fullName: 'mark joel',
+  mass: 100,
+  height: 1.99
+ }),
+    (jane = {
+      fullName:  'mark joel',
+       mass: 100,
+       height: 1.99
+ }),
+   Bmi = mass / (height * height);
+
+ markBmi = mass / (height * height);
+ janeBmi = mass / (height * height);
+
+
+ if (markBmi > janeBmi) {
+ console.log('mark won');
+} else if (janeBmi > markBmi) {
+console.log('jane won'); 
+} else {
+console.log('its a draw');
+}
+
+}
+Bmi();
 
 var mark = {
    fullName: 'mark emeka',
@@ -624,6 +714,7 @@ var developers = [
   },];
 
   //const {name, language, address} = developers  //destructuring
+
   developers.map((developer) => {
     console.log(developer.nmae)
   })
@@ -660,6 +751,25 @@ function calTips(bill) {
 
 // console.log(calTips(300));
 
+var johnBills = [
+{
+  bill1: 12400
+}, 
+{
+  bill1: 4800
+},  
+{
+  bill1: 26800
+},  
+{
+  bill1: 18000
+},  
+{
+  bill1: 4200
+}, 
+]
+console.log(johnBills);
+
 // correction
 
 var john = {
@@ -685,6 +795,7 @@ var john = {
 };
 var obi = {
   fullName: 'Obi Peter ',
+  
   bills: [7700, 47500, 11000, 4000, 4500],
   calTips: function() {
     this.tips = [];
@@ -728,3 +839,5 @@ if (john.average > obi.average) {
     " 's family pays higher tips, with an average of $ '"
   );
 }
+
+

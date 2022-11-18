@@ -541,6 +541,8 @@ var student = {
 
   address: {
     city: "gwagwalada",
+    // village: 
+    // area: PaymentResponse,
   },
 
   email: function () {
@@ -589,35 +591,35 @@ console.log(house.calculatAnnualRent(400000))
 console.log(house);
 
 
-excercise
+//  excercise
 
-function Bmi () {
-  (mark = {
-  fullName: 'mark joel',
-  mass: 100,
-  height: 1.99
- }),
-    (jane = {
-      fullName:  'mark joel',
-       mass: 100,
-       height: 1.99
- }),
-   Bmi = mass / (height * height);
+// function Bmi () {
+//   (mark = {
+//   fullName: 'mark joel',
+//   mass: 100,
+//   height: 1.99
+//  }),
+//     (jane = {
+//       fullName:  'mark joel',
+//        mass: 100,
+//        height: 1.99
+//  });
+//   let bmi = mass / (height * height);
 
- markBmi = mass / (height * height);
- janeBmi = mass / (height * height);
+//  markBmi = mass / (height * height);
+//  janeBmi = mass / (height * height);
 
 
- if (markBmi > janeBmi) {
- console.log('mark won');
-} else if (janeBmi > markBmi) {
-console.log('jane won'); 
-} else {
-console.log('its a draw');
-}
+//  if (markBmi > janeBmi) {
+//  console.log('mark won');
+// } else if (janeBmi > markBmi) {
+// console.log('jane won'); 
+// } else {
+// console.log('its a draw');
+// }
 
-}
-Bmi();
+// }
+// Bmi();
 
 var mark = {
    fullName: 'mark emeka',
@@ -677,19 +679,34 @@ for (var i = 0; i < students.length; i++) {
     break;
   }
 }
+
+// for of loop
+
+for(person in students) {
+  console.log("how far " + students[person])
+};
+
  
 // whileloop 
 
 var counter = 0;
 while (counter < students.length) {
-  console.log('hello' + students[counter]);
+  console.log('hello ' + students[counter]);
   counter++;
 }
+console.log(counter)
 
 // map
-students.slice(1,3).map(function (student) {
+students.slice(0,2).map(function (student) {
    console.log(student)
-})
+});
+
+students.forEach((student) => {
+  console.log(student);
+
+});
+
+
 
 var developers = [
   {
@@ -711,12 +728,22 @@ var developers = [
     name: "frank",
     language: 'javasript',
     address: 'kuje',
-  },];
+  },
+];
 
   //const {name, language, address} = developers  //destructuring
 
+    developers.forEach(function(developer){
+       return console.log(developer.address, developer.name, developer.language)
+    })
+
+   // destructuring
+    developers.map(({name, language, address}) => (
+      console.log(`my name is ${name} i code in ${language} i live in ${address}`)
+    ))
+
   developers.map((developer) => {
-    console.log(developer.nmae)
+    console.log(developer.name)
   })
   developers.map((developer) => (
     console.log(developer.name)
@@ -751,24 +778,24 @@ function calTips(bill) {
 
 // console.log(calTips(300));
 
-var johnBills = [
-{
-  bill1: 12400
-}, 
-{
-  bill1: 4800
-},  
-{
-  bill1: 26800
-},  
-{
-  bill1: 18000
-},  
-{
-  bill1: 4200
-}, 
-]
-console.log(johnBills);
+// var johnBills = [
+// {
+//   bill1: 12400
+// }, 
+// {
+//   bill1: 4800
+// },  
+// {
+//   bill1: 26800
+// },  
+// {
+//   bill1: 18000
+// },  
+// {
+//   bill1: 4200
+// }, 
+// ]
+// console.log(johnBills);
 
 // correction
 
@@ -824,20 +851,54 @@ function calculateAverage(tips) {
 }
 john.calTips();
 obi.calTips();
-john.average = calculateAverage(obi.tips);
+john.average = calculateAverage(john.tips);
 console.log(john, obi);
 
 if (john.average > obi.average) {
   console.log(
     john.fullName +
-    " 's family pays higher tips, with an average of $ " +
+    "'s family pays higher tips, with an average of $" +
     john.average
   );
 } else if (obi.average > john.average) {
   console.log(
     obi.fullName +
-    " 's family pays higher tips, with an average of $ '"
+    " 's family pays higher tips, with an average of $ '" +
+    obi.average
   );
+
+} else {
+  console.log(
+   ' both family pay this same tips,with same average ' 
+  )
+};
+
+ 
+// program for a simple calculator
+
+//  take the operator input
+const operator = prompt('Enter operator (either +, -, * or / ): ');
+
+
+// take the opereator input
+const number1 = prompt(parseFloat('Enter first number: '));
+const number2 = prompt(parseFloat('Enter second number: '));
+
+
+// using if.....else if........else
+if (operator == '+') {
+  result = number1 + number2;
+}
+else if (operator == '-') {
+  result = number1 - number2;
+}
+else if (operator == '*') {
+  result = number1 * number2;
+}
+else {
+  result = number1 / number2;
 }
 
+// display the result
+console.log(`${number1} ${operator} ${number2} = ${result}`)
 
